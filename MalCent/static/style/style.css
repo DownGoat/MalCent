@@ -1,0 +1,16 @@
+#description {
+    max-width: 800px;
+}
+
+#userbar {
+    text-align: right;
+    float: right;
+    width: 100%;
+    height: 20px;
+    background-color: #ebebfc;
+    padding-top: 0px;
+}
+
+#userbar a {
+    padding-left: 3em;
+}

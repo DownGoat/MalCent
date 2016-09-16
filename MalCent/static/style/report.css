@@ -1,0 +1,11 @@
+body {
+    font-family: verdana;
+}
+
+#virustotal table {
+    text-align: left;
+}
+
+#virustotal td {
+    width: 950px;
+}

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>MalCent - Report</title>
+    <link rel="stylesheet" href="/MalCent/static/style/report.css" />
+
+    <script type="text/javascript">
+        document.write('<style type="text/css">.tabber{display:none;}<\/style>');
+
+        var tabberOptions = {
+            'manualStartup':true,
+            'addLinkId': true
+        };
+
+    </script>
+
+    <script type="text/javascript" src="/MalCent/static/scripts/tabber.js"></script>
+
+</head>
+<body>
+<div id="fileinfo">
+    <table id="fileinfo-table">
+        <tr>
+            <td>MD5:</td>
+            <td>{{ r.md5 }}</td>
+        </tr>
+
+        <tr>
+            <td>SHA1:</td>
+            <td>{{ r.sha1 }}</td>
+        </tr>
+
+        <tr>
+            <td>SHA256:</td>
+            <td>{{ r.sha256 }}</td>
+        </tr>
+
+        <tr>
+            <td>ssdeep</td>
+            <td>{{ r.ssdeep }}</td>
+        </tr>
+
+        <tr>
+            <td>Filename:</td>
+            <td>{{ name.filename }}</td>
+        </tr>
+
+        <tr>
+            <td>File size:</td>
+            <td>{{ r.filesize/1024 }} KB ( {{ r.filesize }} bytes )</td>
+        </tr>
+
+        <tr>
+            <td>File type:</td>
+            <td>Unknown</td>
+        </tr>
+
+        <tr>
+            <td>First seen:</td>
+            <td>{{ r.first_seen }}</td>
+        </tr>
+
+        <tr>
+            <td>Last seen:</td>
+            <td>{{ r.last_seen }}</td>
+        </tr>
+
+        <tr>
+            <td>Sample family</td>
+            <td>Unknown</td>
+        </tr>
+    </table>
+</div>
+
+<h4>Filenames:</h4>
+<div id="filenames">
+    <table id="filenames-table">
+        {% for f in fnames %}
+            <tr>
+                <td>{{ f.filename }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</div>
+
+<div id="virustotal">
+    <h3><a href="https://www.virustotal.com/url/341c0234cff9623ae71726d83ffc91ef3f2f4c0ab600be2e6f143670da8f0a24/analysis/">VirusTotal report.</a></h3>
+    <table id="vtreport">
+        <tr>
+            <th>Antivirus</th>
+            <th>Result</th>
+            <th>Last updated</th>
+        </tr>
+        <tr>
+            <td>Agnitum</td>
+            <td>-</td>
+            <td>20121109</td>
+        </tr>
+        <tr>
+            <td>AntiVir</td>
+            <td>-</td>
+            <td>20121109</td>
+        </tr>
+        <tr>
+            <td>Antiy-AVL</td>
+            <td>-</td>
+            <td>20121108</td>
+        </tr>
+        <tr>
+            <td>Avast</td>
+            <td>-</td>
+            <td>20121109</td>
+        </tr>
+        <tr>
+            <td>AVG</td>
+            <td>-</td>
+            <td>20121109</td>
+        </tr>
+        <tr>
+            <td>BitDefender</td>
+            <td>-</td>
+            <td>20121109</td>
+        </tr>
+        <tr>
+            <td>CAT-QuickHeal</td>
+            <td>-</td>
+            <td>20121109</td>
+        </tr>
+        <tr>
+            <td>ClamAV</td>
+            <td>-</td>
+            <td>20121108</td>
+        </tr>
+        <tr>
+            <td>Commtouch</td>
+            <td>-</td>
+            <td>20121109</td>
+        </tr>
+        <tr>
+            <td>Comodo</td>
+            <td>-</td>
+            <td>20121109</td>
+        </tr>
+        <tr>
+            <td>DrWeb</td>
+            <td>-</td>
+            <td>20121109</td>
+        </tr>
+        <tr>
+            <td>Emsisoft</td>
+            <td>-</td>
+            <td>20121109</td>
+        </tr>
+        <tr>
+            <td>ESET-NOD32</td>
+            <td>-</td>
+            <td>20121109</td>
+        </tr>
+        <tr>
+            <td>F-Prot</td>
+            <td>-</td>
+            <td>20121109</td>
+        </tr>
+        <tr>
+            <td>F-Secure</td>
+            <td>-</td>
+            <td>20121109</td>
+        </tr>
+        <tr>
+            <td>Fortinet</td>
+            <td>-</td>
+            <td>20121109</td>
+        </tr>
+        <tr>
+            <td>GData</td>
+            <td>-</td>
+            <td>20121109</td>
+        </tr>
+        <tr>
+            <td>Ikarus</td>
+            <td>-</td>
+            <td>20121109</td>
+        </tr>
+        <tr>
+            <td>Jiangmin</td>
+            <td>-</td>
+            <td>20121109</td>
+        </tr>
+        <tr>
+            <td>K7AntiVirus</td>
+            <td>-</td>
+            <td>20121109</td>
+        </tr>
+        <tr>
+            <td>Kaspersky</td>
+            <td>-</td>
+            <td>20121109</td>
+        </tr>
+        <tr>
+            <td>Kingsoft</td>
+            <td>-</td>
+            <td>20121105</td>
+        </tr>
+        <tr>
+            <td>McAfee</td>
+            <td>-</td>
+            <td>20121109</td>
+        </tr>
+        <tr>
+            <td>McAfee-GW-Edition</td>
+            <td>-</td>
+            <td>20121109</td>
+        </tr>
+        <tr>
+            <td>Microsoft</td>
+            <td>-</td>
+            <td>20121109</td>
+        </tr>
+        <tr>
+            <td>MicroWorld-eScan</td>
+            <td>-</td>
+            <td>20121109</td>
+        </tr>
+        <tr>
+            <td>Norman</td>
+            <td>-</td>
+            <td>20121109</td>
+        </tr>
+        <tr>
+            <td>nProtect</td>
+            <td>-</td>
+            <td>20121109</td>
+        </tr>
+        <tr>
+            <td>Panda</td>
+            <td>-</td>
+            <td>20121109</td>
+        </tr>
+        <tr>
+            <td>PCTools</td>
+            <td>-</td>
+            <td>20121109</td>
+        </tr>
+        <tr>
+            <td>Rising</td>
+            <td>-</td>
+            <td>20121109</td>
+        </tr>
+        <tr>
+            <td>Sophos</td>
+            <td>-</td>
+            <td>20121109</td>
+        </tr>
+        <tr>
+            <td>SUPERAntiSpyware</td>
+            <td>-</td>
+            <td>20121109</td>
+        </tr>
+        <tr>
+            <td>TheHacker</td>
+            <td>-</td>
+            <td>20121109</td>
+        </tr>
+        <tr>
+            <td>TotalDefense</td>
+            <td>-</td>
+            <td>20121108</td>
+        </tr>
+        <tr>
+            <td>TrendMicro</td>
+            <td>-</td>
+            <td>20121109</td>
+        </tr>
+        <tr>
+            <td>TrendMicro-HouseCall</td>
+            <td>-</td>
+            <td>20121109</td>
+        </tr>
+        <tr>
+            <td>VBA32</td>
+            <td>-</td>
+            <td>20121109</td>
+        </tr>
+        <tr>
+            <td>VIPRE</td>
+            <td>-</td>
+            <td>20121109</td>
+        </tr>
+        <tr>
+            <td>ViRobot</td>
+            <td>-</td>
+            <td>20121109</td>
+        </tr>
+    </table>
+</div>
+
+
+
+</body>
+</html>

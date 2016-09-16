@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MalCent - In Queue</title>
+
+    <script type="text/javascript">
+        function refresh() {
+            setTimeout("location.reload(true);", 10000);
+        }
+    </script>
+</head>
+<body onload="javascript:refresh();">
+<h3>This file is in queue</h3>
+You are number {{ number }} in the queue. <br />
+The report can be found here when it is done. <br />
+<br />
+<a href="http://{{ domain }}/analysis/{{ sha1 }}">The page will auto refresh, click here to do it manually.  </a>
+
+</body>
+</html>
